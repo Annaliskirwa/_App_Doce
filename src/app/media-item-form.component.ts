@@ -7,6 +7,7 @@ import { FormGroup,FormControl } from '@angular/forms';
   styleUrls: ['./media-item-form.component.css']
 })
 export class MediaItemFormComponent implements OnInit {
+  // form:FormGroup;
   form:any;
   
   ngOnInit(){
