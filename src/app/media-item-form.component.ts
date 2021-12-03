@@ -10,14 +10,36 @@ export class MediaItemFormComponent implements OnInit {
   // form:FormGroup;
   form:any;
   
+  
   ngOnInit(){
     this.form = new FormGroup({
       medium: new FormControl('Movies'),
-      name: new FormControl('', Validators.pattern('[\\w\\-\\s\\/]+')),
+      name: new FormControl('', Validators.compose([
+        Validators.required,
+        Validators.pattern('[\\w\\-\\s\\/]+')
+
+      ])),
+       
       category: new FormControl(''),
+      // year: new FormControl('', this.yearValidator),
       year: new FormControl('')
     });
   }
+
+  yearValidator(control: FormControl){
+    if (control.value.trim().length === 0) {
+      return null;
+    }
+    const year = parseInt(control.value, 10);
+    const minYear = 1900;
+    const maxYear = 2100;
+    if (year >= minYear && year <= maxYear) {
+      return null;
+    } else {
+      return { year: true };
+    }
+  }
+
   onSubmit(mediaItem:any){
     console.log(mediaItem);
   }
