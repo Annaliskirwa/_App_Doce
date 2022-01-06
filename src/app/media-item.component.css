@@ -17,13 +17,13 @@ h2 {
   border-color: #53ace4;
 }
 :host(.medium-movies) > h2 {
-  color: #53ace4;
+  color: crimson;
 }
 :host(.medium-series) {
   border-color: #45bf94;
 }
 :host(.medium-series) > h2 {
-  color: #45bf94;
+  color: purple;
 }
 .tools {
   margin-top: 8px;
