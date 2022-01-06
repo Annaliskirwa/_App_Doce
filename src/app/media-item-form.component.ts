@@ -13,14 +13,14 @@ export class MediaItemFormComponent implements OnInit {
   
   ngOnInit(){
     this.form = new FormGroup({
-      medium: new FormControl(''),
+      medium: new FormControl('Series'),
       name: new FormControl('', Validators.compose([
         Validators.required,
         Validators.pattern('[\\w\\-\\s\\/]+')
 
       ])),
        
-      category: new FormControl(''),
+      category: new FormControl('Comedy'),
       // year: new FormControl('', this.yearValidator),
       year: new FormControl('')
     });
