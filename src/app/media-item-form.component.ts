@@ -13,7 +13,7 @@ export class MediaItemFormComponent implements OnInit {
   
   ngOnInit(){
     this.form = new FormGroup({
-      medium: new FormControl('Movies'),
+      medium: new FormControl(''),
       name: new FormControl('', Validators.compose([
         Validators.required,
         Validators.pattern('[\\w\\-\\s\\/]+')
