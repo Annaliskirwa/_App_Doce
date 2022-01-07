@@ -9,6 +9,11 @@ import { MediaItemFormComponent } from './media-item-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 // import { MediaItemService } from './media-item.service';
 
+
+const lookupLists = {
+  mediums: ['Movies', 'Series']
+};
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -25,8 +30,9 @@ import { ReactiveFormsModule } from '@angular/forms';
   bootstrap: [
     AppComponent
   ],
-  // providers:[
-  //   MediaItemService
-  // ]
+  providers:[
+    // MediaItemService
+    {provide: 'lookupListToken', useValue: lookupLists}
+  ]
 })
 export class AppModule {}
