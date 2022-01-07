@@ -7,6 +7,7 @@ import { MediaItemListComponent } from './media-item-list.component';
 // import { CategoryListPipe } from './category-list.pipe';
 import { MediaItemFormComponent } from './media-item-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MediaItemService } from './media-item.service';
 
 @NgModule({
   imports: [
@@ -23,6 +24,9 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   bootstrap: [
     AppComponent
+  ],
+  providers:[
+    MediaItemService
   ]
 })
 export class AppModule {}
