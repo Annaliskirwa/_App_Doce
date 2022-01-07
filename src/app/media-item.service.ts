@@ -49,19 +49,18 @@ export class MediaItemService {
     }
   ];
 
-  get(){
+  get() {
     return this.mediaItems;
   }
 
-  add(mediaItem: any){
+  add(mediaItem:any) {
     this.mediaItems.push(mediaItem);
   }
 
-  delete(mediaItem: any){
+  delete(mediaItem:any) {
     const index = this.mediaItems.indexOf(mediaItem);
-    if (index >= 0){
+    if (index >= 0) {
       this.mediaItems.splice(index, 1);
     }
-
   }
 }
