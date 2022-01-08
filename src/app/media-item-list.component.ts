@@ -17,11 +17,12 @@ export class MediaItemListComponent implements OnInit {
   }
 
   onMediaItemDelete(mediaItem:any) {
-    // this.mediaItemService.delete(mediaItem);
-    this.mediaItemService.delete(mediaItem)
-      .subscribe(() => {
-        this.getMediaItems(this.medium);
-      });
+    this.mediaItemService.delete(mediaItem);
+    console.log("clicked remove")
+    // this.mediaItemService.delete(mediaItem)
+    //   .subscribe(() => {
+    //     this.getMediaItems(this.medium);
+    //   });
   }
 
   getMediaItems(medium: string) {
