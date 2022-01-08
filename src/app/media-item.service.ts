@@ -67,7 +67,10 @@ export class MediaItemService {
   }
 
   add(mediaItem: MediaItem) {
-    return this.http.post('mediaitems', mediaItem);
+    return this.http.post('mediaitems', mediaItem)
+    .pipe(
+      catchError(this.handleError)
+    );;
   }
 
   delete(mediaItem:any) {
