@@ -74,10 +74,10 @@ export class MediaItemService {
   }
 
   delete(mediaItem:any) {
-    return this.http.delete(`mediaitems/${mediaItem.id}`)
-    .pipe(
-      catchError(this.handleError)
-    );
+    // return this.http.delete(`mediaitems/${mediaItem.id}`)
+    // .pipe(
+    //   catchError(this.handleError)
+    // );
     const index = this.mediaItems.indexOf(mediaItem);
     if (index >= 0) {
       this.mediaItems.splice(index, 1);
