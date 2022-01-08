@@ -64,8 +64,8 @@ export class MediaItemService {
     }));
   }
 
-  add(mediaItem:any) {
-    this.mediaItems.push(mediaItem);
+  add(mediaItem: MediaItem) {
+    return this.http.post('mediaitems', mediaItem);
   }
 
   delete(mediaItem:any) {
