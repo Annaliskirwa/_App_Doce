@@ -11,12 +11,15 @@ import { MediaItemService } from './media-item.service';
 import { lookupLists, lookupListToken } from './providers';
 import { HttpClientModule, HttpXhrBackend } from '@angular/common/http';
 import { MockXHRBackend } from './mock-xhr-backend';
+import { VerificationComponent } from './verification/verification.component';
+import { CodeInputModule } from 'angular-code-input';
 
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CodeInputModule
   ],
   declarations: [
     AppComponent,
@@ -24,7 +27,8 @@ import { MockXHRBackend } from './mock-xhr-backend';
     MediaItemListComponent,
     // FavoriteDirective,
     // CategoryListPipe,
-    MediaItemFormComponent
+    MediaItemFormComponent,
+    VerificationComponent
   ],
   providers: [
     { provide: lookupListToken, useValue: lookupLists },
