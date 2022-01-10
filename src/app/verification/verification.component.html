@@ -1,6 +1,16 @@
+<section>
+<div class = "container">
+    <p>Verify your phone number</p>
+    <p>Enter the code sent to:</p>
 <code-input [isCodeHidden]="false"
               [isNonDigitsCode]="false"
               [codeLength]="4"
               (codeChanged)="onCodeChanged($event)"
               (codeCompleted)="onCodeCompleted($event)">
-  </code-input>
+</code-input>
+
+<button>Verify</button>
+<p>Didnt receive code?</p>
+<a href = "#">Resend code</a>
+</div>
+</section>
