@@ -1,10 +1,11 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,OnInit, ViewEncapsulation } from '@angular/core';
 import { MediaItemService, MediaItem} from './media-item.service';
 
 @Component({
   selector: 'mw-app',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  encapsulation: ViewEncapsulation.Emulated
 })
 
 
