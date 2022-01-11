@@ -7,7 +7,8 @@ import  {newItemRouting } from './new-item.routing';
 @NgModule({
     imports: [
         CommonModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        newItemRouting
     ],
     declarations: [
         MediaItemFormComponent

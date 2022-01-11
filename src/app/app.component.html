@@ -1,11 +1,11 @@
 <nav>
-  <a routerLink="/">
+  <a routerLink="/" (click)="getMediaItems('')">
     <img src="assets/04.png" class="icon" />
   </a>
-  <a routerLink="/Movies">
+  <a routerLink="/Movies" (click)="getMediaItems('Movies')">
     <img src="assets/03.png" class="icon" />
   </a>
-  <a routerLink="/Series">
+  <a routerLink="/Series" (click)="getMediaItems('Series')">
     <img src="assets/02.png" class="icon" />
   </a>
 </nav>
