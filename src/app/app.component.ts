@@ -1,5 +1,6 @@
 import { Component,OnInit, ViewEncapsulation } from '@angular/core';
 import { MediaItemService, MediaItem} from './media-item.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'mw-app',
