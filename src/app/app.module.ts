@@ -12,6 +12,7 @@ import { lookupLists, lookupListToken } from './providers';
 import { HttpClientModule, HttpXhrBackend } from '@angular/common/http';
 import { MockXHRBackend } from './mock-xhr-backend';
 import { routing } from './app.routing';
+import { AngularcliComponent } from './angularcli/angularcli.component';
 // import { NewItemModule } from './new-item/new-item.module';
 
 @NgModule({
@@ -26,6 +27,7 @@ import { routing } from './app.routing';
     AppComponent,
     MediaItemComponent,
     MediaItemListComponent,
+    AngularcliComponent,
     // FavoriteDirective,
     // CategoryListPipe,
     // MediaItemFormComponent
